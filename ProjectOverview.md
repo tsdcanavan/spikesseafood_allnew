@@ -22,8 +22,7 @@ restaurants as well. This makes it valuable as a flexible, saleable product.
 *   Menu page - the standard daily menu
 *   Comments/review page - a list of comments left by customers
 *   Specials page -  daily lunch and dinner specials, updated daily
+*   Admin login page - restrict access to the admin pages by logging in
 *   Admin comments - review and accept comments, handled by the admin
 *   Admin menu page - update the menu and specials page, handled by the admin
-*   Admin login page - restrict access to the admin pages by logging in
-
- 
+*   Admin specials page - update the daily specials
