@@ -3,7 +3,7 @@
 ## Final Project Overview
 
 ### Restaurant CMS system 
-### Spikes Seafood Market & Restaurant 
+### *Spikes Seafood Market & Restaurant* 
 
 ---
 
