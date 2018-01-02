@@ -11,9 +11,9 @@ class Detail extends Component {
   // Add code to get the book with an _id equal to the id in the route param
   // e.g. http://localhost:3000/books/:id
   componentDidMount() {
-    API.getBook(this.props.match.params.id)
-    .then(book => {
-      this.setState({book: book.data});
+    API.getMenu(this.props.match.params.id)
+    .then(menu => {
+      this.setState({menu: menu.data});
     })
   }
 
@@ -24,7 +24,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.book.title} by {this.state.book.author}
+                {this.state.menu.item} by {this.state.menu.category}
               </h1>
             </Jumbotron>
           </Col>
@@ -32,16 +32,16 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
+              <h1>Status</h1>
               <p>
-                {this.state.book.synopsis}
+                {this.state.menu.status}
               </p>
             </article>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/">← Back to Category</Link>
           </Col>
         </Row>
       </Container>
