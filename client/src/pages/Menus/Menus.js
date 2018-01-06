@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 
 class Menus extends Component {
   state = {
@@ -59,7 +59,7 @@ class Menus extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Spike's Menu Update</h1>
+              <h2>Spike's Menu Update</h2>
             </Jumbotron>
             <form>
               <Input
@@ -90,7 +90,7 @@ class Menus extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Menu List</h1>
+              <h2>Menu List</h2>
             </Jumbotron>
             {this.state.menus.length ? (
               <List>
@@ -98,7 +98,7 @@ class Menus extends Component {
                   <ListItem key={menu._id}>
                     <Link to={"/menus/" + menu._id}>
                       <strong>
-                        {menu.item} by {menu.category}
+                        {menu.item} as {menu.category}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteMenu(menu._id)} />

@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/menus");
   },
   // Gets the book with the given id
-  getMenus: function(id) {
+  getMenu: function(id) {
     return axios.get("/api/menus/" + id);
   },
   // Deletes the book with the given id

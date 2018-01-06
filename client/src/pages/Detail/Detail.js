@@ -6,7 +6,7 @@ import API from "../../utils/API";
 
 class Detail extends Component {
   state = {
-    book: {}
+    menu: {}
   };
   // Add code to get the book with an _id equal to the id in the route param
   // e.g. http://localhost:3000/books/:id

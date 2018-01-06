@@ -5,31 +5,31 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 
-class Books extends Component {
+class Specials extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    menus: [],
+    category: "",
+    item: "",
+    status: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadSpecials();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadSpecials = () => {
+    API.getSpecials()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ menus: res.data, category: "", item: "", status: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deleteSpecial = id => {
+    API.deleteSpecial(id)
+      .then(res => this.loadSpecials())
       .catch(err => console.log(err));
   };
 
@@ -42,13 +42,13 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+    if (this.state.category && this.state.item) {
+      API.saveSpecial({
+        category: this.state.category,
+        item: this.state.item,
+        status: this.state.status
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadSpecials())
         .catch(err => console.log(err));
     }
   };
@@ -59,49 +59,49 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h2>Spike's Specials Update</h2>
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.category}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="category"
+                placeholder="Category (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.item}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="item"
+                placeholder="Item (required)"
               />
-              <TextArea
-                value={this.state.synopsis}
+              <Input
+                value={this.state.status}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="status"
+                placeholder="Status (Optional)"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                disabled={!(this.state.category && this.state.item)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit Item
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h2>Specials List</h2>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.specials.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.specials.map(special => (
+                  <ListItem key={special._id}>
+                    <Link to={"/specials/" + special._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {special.item} as {special.category}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => this.deleteSpecial(special._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -115,4 +115,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default Specials;
