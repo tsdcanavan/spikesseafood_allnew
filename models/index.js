@@ -1,3 +1,4 @@
 module.exports = {
-  Menu: require("./menu")
+  Menu: require("./menu"),
+  Special: require("./special")
 };

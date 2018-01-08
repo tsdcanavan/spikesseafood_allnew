@@ -13,10 +13,5 @@ router
   .get(menusController.findById)
   .put(menusController.update)
   .delete(menusController.remove);
-
-router
-  .route("/specials")  
-  .get(specialsController.findAll)
-  .post(specialsController.create);
-  
+ 
 module.exports = router;
