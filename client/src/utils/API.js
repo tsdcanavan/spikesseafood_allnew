@@ -13,6 +13,10 @@ export default {
   deleteMenu: function(id) {
     return axios.delete("/api/menus/" + id);
   },
+  // Updates the menu with the given id
+  updateMenu: function(id) {
+    return axios.update("/api/menus/" + id);
+  },
   // Saves a book to the database
   saveMenu: function(menuData) {
     return axios.post("/api/menus", menuData);

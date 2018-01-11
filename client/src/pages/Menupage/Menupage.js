@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 
-class Specials extends Component {
+class Menupage extends Component {
   state = {
     menus: [],
     category: "",
@@ -16,20 +16,20 @@ class Specials extends Component {
   };
 
   componentDidMount() {
-    this.loadSpecials();
+    this.loadMenus();
   }
 
-  loadSpecials = () => {
-    API.getSpecials()
+  loadMenus = () => {
+    API.getMenus()
       .then(res =>
         this.setState({ menus: res.data, category: "", item: "", status: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteSpecial = id => {
-    API.deleteSpecial(id)
-      .then(res => this.loadSpecials())
+  deleteMenu = id => {
+    API.deleteMenu(id)
+      .then(res => this.loadMenus())
       .catch(err => console.log(err));
   };
 
@@ -43,12 +43,12 @@ class Specials extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.category && this.state.item) {
-      API.saveSpecial({
+      API.saveMenu({
         category: this.state.category,
         item: this.state.item,
         status: this.state.status
       })
-        .then(res => this.loadSpecials())
+        .then(res => this.loadMenus())
         .catch(err => console.log(err));
     }
   };
@@ -59,9 +59,9 @@ class Specials extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h2>Spike's Specials Update</h2>
+              <h2>Spike's Menu</h2>
             </Jumbotron>
-            <form>
+            {/* <form>
               <Input
                 value={this.state.category}
                 onChange={this.handleInputChange}
@@ -86,22 +86,22 @@ class Specials extends Component {
               >
                 Submit Item
               </FormBtn>
-            </form>
+            </form> */}
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h2>Specials List</h2>
+              <h2>Menu List</h2>
             </Jumbotron>
-            {this.state.specials.length ? (
+            {this.state.menus.length ? (
               <List>
-                {this.state.specials.map(special => (
-                  <ListItem key={special._id}>
-                    <Link to={"/specials/" + special._id}>
+                {this.state.menus.map(menu => (
+                  <ListItem key={menu._id}>
+                    <Link to={"/menus/" + menu._id}>
                       <strong>
-                        {special.item} as {special.category}
+                        {menu.item} as {menu.category}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteSpecial(special._id)} />
+                    <DeleteBtn onClick={() => this.deleteMenu(menu._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -115,4 +115,4 @@ class Specials extends Component {
   }
 }
 
-export default Specials;
+export default Menupage;
