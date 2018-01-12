@@ -1,0 +1,119 @@
+/****************************
+FONT EXAMPLES
+****************************/
+/*
+font-family: 'Neucha', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Fresca', sans-serif; 
+*/
+/****************************
+GENERAL
+****************************/
+body {
+	font-family: Fresca, sans-serif;
+  background-color: #edfbfc;
+}
+
+h1 {
+	color: black;
+	text-align: center
+}
+
+img{
+  max-width: 100%;
+}
+
+#wrapper {
+  max-width: 940px;
+  margin: 0 auto 0 auto;
+  padding: 0 5%;
+  display: block;
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #ccc;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0px 5px;
+}
+
+/****************************
+FOOD GALLERY
+****************************/
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#gallery li {
+  float: left;
+  width: 28%;
+  margin: 2.5%;
+  color: #edfbfc;
+}
+
+#gallery li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #edfbfc;
+  display: inline-block;
+}
+
+
+/****************************
+ORIGINAL CSS
+****************************/
+
+.styledFrescaReg {
+  color:  crimson;
+  font-family: Fresca;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.styledFrescaLarge {
+	color: crimson;
+	font-family: 'Lobster Two', cursive ;
+	font-size: 2.00em;
+  text-align: center;
+}
+
+.bannerImage {
+  align: left;
+	display: 	block;
+	margin: 	auto;
+	width: 	50%; 
+}
+
+.styleMailto {
+	text-decoration:none;
+	color: crimson;
+}
+
+#googleMap {
+  width: 300px;
+  height: 225px;
+  border: none;
+  display: block;
+}
+
+.clearfix::after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+.navbar-detail {
+	color: white;
+	font-family: 'Lobster Two', cursive ;
+  text-align: center;
+}

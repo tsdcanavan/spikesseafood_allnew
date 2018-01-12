@@ -57,11 +57,11 @@ class Home extends Component {
         return (
             <Container fluid>
         <div className="row">
-          <div className="col-md-10"> <img className="bannerImage col-md-10" src="../../img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
+          <div className="col-md-10"> <img className="bannerImage col-md-10" src="./img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
           </div>
           <div className="col-md-2">
             <a href="https://www.facebook.com/Spikes-Fish-Mkt-Restaurant-115826045106813" target="_blank">
-              <img src="img/facebook-wrap.png" alt="Facebook Logo" className="social-icon" />
+              <img src="./img/facebook-wrap.png" alt="Facebook Logo" className="social-icon" />
             </a>
           </div>
         </div>
@@ -106,7 +106,7 @@ Google map insert - opening div /div is for alignment of the map.
 */}
 <div className="col-md-12">
         <center>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8506770816043!2d-74.04998358540665!3d40.101042082703714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c18613d52c97b5%3A0xecbf4e507f2403a2!2s415+Broadway%2C+Point+Pleasant+Beach%2C+NJ+08742!5e0!3m2!1sen!2sus!4v1499717231195" width={300} height={225} frameBorder={0} align="center" style={{border: 0}} allowFullScreen />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.8506770816043!2d-74.04998358540665!3d40.101042082703714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c18613d52c97b5%3A0xecbf4e507f2403a2!2s415+Broadway%2C+Point+Pleasant+Beach%2C+NJ+08742!5e0!3m2!1sen!2sus!4v1499717231195" width={275} height={206} frameBorder={0} align="center" style={{border: 0}} allowFullScreen />
         </center>
         </div>
         {/*
@@ -119,20 +119,20 @@ Bottom border, allow to click for larger view in new tab/window.
           <section>
             <ul id="gallery">
               <li>
-                <a href="img/food1.jpg" target="_blank">
-                  <img src="img/food1.jpg" alt="Spikes Dishes" />
+                <a href="./img/food1.jpg" target="_blank">
+                  <img src="./img/food1.jpg" alt="Spikes Dishes" />
                   <p>Spike's Dishes</p>
                 </a>
               </li>
               <li>
-                <a href="img/food2.jpg" target="_blank">
-                  <img src="img/food2.jpg" alt="Spikes Storefront" />
+                <a href="./img/food2.jpg" target="_blank">
+                  <img src="./img/food2.jpg" alt="Spikes Storefront" />
                   <p>Spike's Restaurant</p>
                 </a>
               </li>
               <li>
-                <a href="img/food3.jpg" target="_blank">
-                  <img src="img/food3.jpg" alt="Spikes Dishes" />
+                <a href="./img/food3.jpg" target="_blank">
+                  <img src="./img/food3.jpg" alt="Spikes Dishes" />
                   <p>Spike's Dishes</p>
                 </a>
               </li>

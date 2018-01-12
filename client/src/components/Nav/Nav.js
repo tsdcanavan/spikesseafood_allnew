@@ -12,6 +12,16 @@ const Nav = () =>
         <a href="/" className="navbar-brand">
           Spikes Seafood
         </a>
+        <a href="/menupage" className='navbar-brand'>
+          Menu
+         </a>
+         <a href="/specials" className='navbar-brand'>
+          Specials
+         </a>
+         <a href="/admin" className='navbar-brand'>
+          Admin
+         </a>
+
       </div>
     </div>
   </nav>;
