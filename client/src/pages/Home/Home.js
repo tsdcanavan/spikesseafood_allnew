@@ -78,10 +78,10 @@ class Home extends Component {
               <i class="fab fa-facebook-square fa-lg" ></i>
             </a>
             <a>
-            <i class='fab fa-twitter-square fa-lg' ></i>
+              <i class='fab fa-twitter-square fa-lg' ></i>
             </a>
             <a>
-            <i class='fab fa-instagram fa-lg' ></i>
+              <i class='fab fa-instagram fa-lg' ></i>
             </a>
           </div>
         </div>
@@ -163,8 +163,8 @@ Bottom border, allow to click for larger view in new tab/window.
 		I used it as a simple date display.*/}
           <p>
             <Link to={'/login'}>
-            ©SiteSystems
-            </Link> 
+              ©SiteSystems
+            </Link>
           </p>
         </footer>
         {/* </div> */}
