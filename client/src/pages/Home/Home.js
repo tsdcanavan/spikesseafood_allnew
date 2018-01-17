@@ -75,7 +75,13 @@ class Home extends Component {
           </section>
           <div className="col-md-2">
             <a href="https://www.facebook.com/Spikes-Fish-Mkt-Restaurant-115826045106813" target="_blank">
-              <img src="./img/facebook-wrap.png" alt="Facebook Logo" className="social-icon" />
+              <i class="fab fa-facebook-square fa-lg" ></i>
+            </a>
+            <a>
+            <i class='fab fa-twitter-square fa-lg' ></i>
+            </a>
+            <a>
+            <i class='fab fa-instagram fa-lg' ></i>
             </a>
           </div>
         </div>
