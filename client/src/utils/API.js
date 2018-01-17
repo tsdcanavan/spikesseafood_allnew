@@ -1,11 +1,18 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+  // Gets all menus
   getMenus: function() {
     return axios.get("/api/menus");
   },
-  // Gets the book with the given id
+  getSpecials: function() {
+    return axios.get("/api/specials");
+  },
+  // Gets menus by category
+  // getCats: function() {
+  //   return axios.get("/api/menus" + category);
+  // },
+  // // Gets the book with the given id
   getMenu: function(id) {
     return axios.get("/api/menus/" + id);
   },

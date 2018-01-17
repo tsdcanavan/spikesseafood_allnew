@@ -15,13 +15,12 @@ const Nav = () =>
         <a href="/menupage" className='navbar-brand'>
           Menu
          </a>
-         <a href="/specials" className='navbar-brand'>
+         <a href="/specialpage" className='navbar-brand'>
           Specials
          </a>
-         <a href="/admin" className='navbar-brand'>
+         {/* <a href="/admin" className='navbar-brand'>
           Admin
-         </a>
-
+         </a> */}
       </div>
     </div>
   </nav>;

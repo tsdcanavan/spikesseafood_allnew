@@ -27,6 +27,7 @@ class Menupage extends Component {
       .catch(err => console.log(err));
   };
 
+
   deleteMenu = id => {
     API.deleteMenu(id)
       .then(res => this.loadMenus())
@@ -57,57 +58,36 @@ class Menupage extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h2>Spike's Menu</h2>
-            </Jumbotron>
-            {/* <form>
-              <Input
-                value={this.state.category}
-                onChange={this.handleInputChange}
-                name="category"
-                placeholder="Category (required)"
-              />
-              <Input
-                value={this.state.item}
-                onChange={this.handleInputChange}
-                name="item"
-                placeholder="Item (required)"
-              />
-              <Input
-                value={this.state.status}
-                onChange={this.handleInputChange}
-                name="status"
-                placeholder="Status (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.category && this.state.item)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Item
-              </FormBtn>
-            </form> */}
+          <Col size='md-3'>
+          <Jumbotron>
+          <img className="bannerPage " src="./img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
+          </Jumbotron>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h2>Menu List</h2>
+              <h2><center>Menu</center></h2>
             </Jumbotron>
             {this.state.menus.length ? (
               <List>
                 {this.state.menus.map(menu => (
                   <ListItem key={menu._id}>
-                    <Link to={"/menus/" + menu._id}>
+                    {/* <Link to={"/menus/" + menu._id}> */}
                       <strong>
-                        {menu.item} as {menu.category}
+                        {menu.category} - {menu.item}
                       </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteMenu(menu._id)} />
+                    {/* </Link> */}
+                    {/* <DeleteBtn onClick={() => this.deleteMenu(menu._id)} /> */}
                   </ListItem>
                 ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
             )}
+          </Col>
+          <Col size='md-3'>
+          <Jumbotron>
+          <img className="bannerPage " src="./img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
+          </Jumbotron>
           </Col>
         </Row>
       </Container>

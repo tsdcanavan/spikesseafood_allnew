@@ -57,30 +57,41 @@ class Admin extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size='md-3'>
+          <Jumbotron>
+          <img className="bannerImage " src="./img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
+            </Jumbotron>
+          </Col>
+          <Col size="md-6">
             <Jumbotron>
               <h1>
                 Menu Editor
               </h1>
             </Jumbotron>
           </Col>
+          <Col size='md-3'>
+          <Jumbotron>
+          <img className="bannerImage " src="./img/2011-04-23_11-58-26_619.jpg" alt="Market Banner" />
+            </Jumbotron>
+          </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
+          <Col size="md-6 md-offset-3">
+<Jumbotron>
               <Link to="/Menus">
-              <UpdateBtn />
+              <h2><center>Menu Admin</center></h2>
               </Link>
+</Jumbotron>
+<Jumbotron>
               <Link to="/Specials">
-              <UpdateBtn />
+              <h2><center>Specials Admin</center></h2>
               </Link>
-              <Link to="/">
-              <UpdateBtn />
-              </Link>
+</Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Category</Link>
+            <Link to="/">← Back to Home</Link>
           </Col>
         </Row>
       </Container>

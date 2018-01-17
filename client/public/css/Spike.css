@@ -11,7 +11,8 @@ GENERAL
 ****************************/
 body {
 	font-family: Fresca, sans-serif;
-  background-color: #edfbfc;
+  /* background-color: #f3929f; */
+  background-color: #f7a298
 }
 
 h1 {
@@ -91,7 +92,14 @@ ORIGINAL CSS
   align: left;
 	display: 	block;
 	margin: 	auto;
-	width: 	50%; 
+	width: 	80%; 
+}
+
+.bannerPage {
+  align: left;
+	display: 	block;
+	margin: 	auto;
+	width: 	100%; 
 }
 
 .styleMailto {
